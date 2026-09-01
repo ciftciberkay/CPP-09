@@ -1,30 +1,28 @@
 #ifndef PMERGEME_HPP
 # define PMERGEME_HPP
-
 # include <ctime>
 # include <list>
 # include <stdexcept>
 # include <string>
 # include <vector>
 
-class PmergeMe {
+class PmergeMe
+{
 public:
 	PmergeMe();
 	PmergeMe(const PmergeMe &other);
 	~PmergeMe();
 	PmergeMe &operator=(const PmergeMe &other);
-
 	void run(int argc, char **argv);
 
 private:
-	struct Pair {
+	struct Pair
+	{
 		int big;
 		int small;
 	};
-
 	std::vector<int> _vector;
 	std::list<int> _list;
-
 	static int parsePositive(const std::string &text);
 	static void printRange(const std::string &label, const std::vector<int> &values);
 	static void sortVector(std::vector<int> &values);
