@@ -15,7 +15,8 @@ PmergeMe::~PmergeMe() {
 
 PmergeMe &PmergeMe::operator=(const PmergeMe &other)
 {
-	if (this != &other) {
+	if (this != &other)
+	{
 		_vector = other._vector;
 		_list = other._list;
 	}
